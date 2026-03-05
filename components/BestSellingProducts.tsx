@@ -12,9 +12,9 @@ import product_7 from "../assets/product_7.png";
 import product_8 from "../assets/product_8.png";
 import product_9 from "../assets/product_9.png";
 import product_10 from "../assets/product_10.png";
-import product_11 from "../assets/product_11.png";
-import product_12 from "../assets/product_12.png";
-import product_13 from "../assets/product_13.png";
+import product_11 from "../assets/product_11.PNG";
+import product_12 from "../assets/product_12.PNG";
+import product_13 from "../assets/product_13.PNG";
 
 // Define TypeScript interfaces
 interface Product {
