@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <>
       <div className="bg-gray-900 text-white text-center py-2 text-sm">
-        Enjoy Free Shipping On All Orders
+        Welcome to <b>Starlac paints!</b>
       </div>
       <header className="bg-black text-white sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">

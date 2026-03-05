@@ -12,6 +12,9 @@ import product_7 from "../assets/product_7.png";
 import product_8 from "../assets/product_8.png";
 import product_9 from "../assets/product_9.png";
 import product_10 from "../assets/product_10.png";
+import product_11 from "../assets/product_11.png";
+import product_12 from "../assets/product_12.png";
+import product_13 from "../assets/product_13.png";
 
 // Define TypeScript interfaces
 interface Product {
@@ -76,6 +79,21 @@ const products: Product[] = [
     category: "Interior",
     image: product_10,
   },
+  {
+    name: "Filling",
+    category: "Interior",
+    image: product_11,
+  },
+  // {
+  //   name: "Filling",
+  //   category: "Interior",
+  //   image: product_12,
+  // },
+  {
+    name: "Filling",
+    category: "Interior",
+    image: product_13,
+  },
 ];
 
 const categories: string[] = ["Interior", "Exterior", "Interior", "Interior", "Interior"];
@@ -131,12 +149,14 @@ export default function BestSellingProducts() {
         </p>
 
         {/* Category Tabs */}
-        <CategoryTabs categories={categories} />
+        {/* <CategoryTabs categories={categories} /> */}
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-12">
+        {/* Products List (Flex with responsive columns) */}
+        <div className="flex flex-wrap justify-center mb-12">
           {products.map((product, idx) => (
-            <ProductCard key={idx} product={product} index={idx} />
+            <div key={idx} className="w-1/2 md:w-1/3 lg:w-1/5 flex justify-center">
+              <ProductCard product={product} index={idx} />
+            </div>
           ))}
         </div>
 
@@ -144,7 +164,7 @@ export default function BestSellingProducts() {
         <div className="text-center">
           <Button
             variant="outline"
-            className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-12 py-6 rounded-full text-lg transition-all"
+            className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-12 py-6 rounded-full text-lg transition-all cursor-pointer"
           >
             Show more
           </Button>
